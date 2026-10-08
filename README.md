@@ -1,42 +1,27 @@
-```markdown
-# 🏥 Monitor de Indicadores Epidemiológicos - SUS / PE
+# Monitor de Indicadores Epidemiológicos (SUS - PE)
 
-Aplicação interativa desenvolvida em Python para ingestão, tratamento, processamento de métricas epidemiológicas e visualização de dados abertos de saúde pública do estado de Pernambuco.
+Aplicação desenvolvida em Python para processamento e visualização de dados abertos de saúde pública do estado de Pernambuco.
 
-O projeto conecta-se a bases públicas alinhadas ao **OpenDataSUS** e às diretrizes de **Saúde Digital**, automatizando a análise temporal de agravos à saúde pública e oferecendo suporte à visualização de dados para gestão e pesquisa.
+## Sobre o Projeto
 
----
+O projeto realiza a extração de dados públicos (DATASUS / SES-PE) e apresenta gráficos e métricas epidemiológicas, tais como:
+- Média móvel de 7 dias de casos e óbitos
+- Taxa de letalidade acumulada
+- Comparativo entre estados do Nordeste
+- Exportação dos dados filtrados em CSV
 
-## 🎯 Funcionalidades Principais
+## Tecnologias Utilizadas
 
-- **Ingestão Automatizada de Dados:** Consumo e estruturação de dados públicos de saúde via pipeline HTTP/REST.
-- **Engenharia de Métricas Epidemiológicas:**
-  - Cálculo de **Média Móvel de 7 dias** para suavização estatística de variações diárias.
-  - Cálculo contínuo da **Taxa de Letalidade (%)**.
-  - Consolidação de casos e óbitos acumulados.
-- **Visualização Interativa:**
-  - Gráficos dinâmicos de barras e séries temporais com suporte a zoom e *hover*.
-  - Análise comparativa da distribuição acumulada entre estados do **Nordeste**.
-  - Filtro temporal configurável via menu lateral.
-- **Exportação de Dados:** Módulo integrado para geração e download do dataset tratado em formato `.csv`.
+- Python
+- Streamlit
+- Pandas
+- Plotly
 
----
+## Como Executar
 
-## 🛠️ Stack Tecnológica
-
-| Componente | Tecnologia | Uso |
-| :--- | :--- | :--- |
-| **Linguagem** | Python 3.10+ | Lógica de processamento e manipulação de dados |
-| **Interface Web** | Streamlit | Construção do dashboard e componentes interativos |
-| **Manipulação de Dados** | Pandas | Limpeza, transformação e geração de séries temporais |
-| **Visualização** | Plotly (Express / Graph Objects) | Rendimento dos gráficos dinâmicos e interativos |
-
----
-
-## 🚀 Como Executar o Projeto Localmente
-
-### Pré-requisitos
-- Python 3.10 ou superior instalado.
+1. Instalar as dependências:
+```bash
+pip install streamlit pandas plotly
 
 ### Passo a Passo
 
